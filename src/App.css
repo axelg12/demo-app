@@ -1,28 +1,56 @@
 .App {
   text-align: center;
+  height: calc(100vh - 100px);
+  width: calc(100vw - 100px);
+  padding: 50px;
+  font-size: 10px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App__container {
+  height: 100%;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.Container {
+  background: url('./static/mountain.jpg') no-repeat;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  animation-duration: 20s;
+  animation-name: backgroundchange;
+  animation-iteration-count: infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Container__text {
   color: white;
+  letter-spacing: 15px;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 3em;
 }
 
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes backgroundchange {
+  0% {
+    background-image: url('./static/mountain.jpg');
+  }
+  30% {
+    background-image: url('./static/mountain.jpg');    
+  }
+  33% {
+    background-image: url('./static/mountain2.jpg');    
+  }
+  60% {
+    background-image: url('./static/mountain2.jpg');        
+  }
+  66% {
+    background-image: url('./static/mountain3.jpg');    
+  }
+  96% {
+    background-image: url('./static/mountain3.jpg');        
+  }
+  99% {
+    background-image: url('./static/mountain.jpg');    
+  }
 }
